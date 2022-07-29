@@ -1,4 +1,4 @@
-"""Flask app 
+"""Flask app
 
 TODO: Create thumbnails for display_images page
 TODO: Add form validation
@@ -82,8 +82,8 @@ def upload_image():
 
             save_form = SaveImageForm()
 
-            return render_template("/edit.html",  
-                image_aws_url=aws_info['aws_url'], 
+            return render_template("/edit.html",
+                image_aws_url=aws_info['aws_url'],
                 image=new_image,
                 form=save_form,
                 bw=False,
@@ -133,7 +133,7 @@ def edit_image(image_id):
     # TODO: need to decide what we want to do with image
     # - whether it is undoable or not
     save_form = SaveImageForm()
-    return render_template('/edit.html', 
+    return render_template('/edit.html',
         image_aws_url=temp_image_info['aws_url'],
         image=image,
         bw=True,
